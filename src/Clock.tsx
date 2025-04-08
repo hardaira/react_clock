@@ -47,7 +47,8 @@ export class Clock extends React.PureComponent<ClockProps> {
   }
 
   render() {
-    const { name, today } = this.props;
+    const { name }= this.props;
+    const { today } = this.state;
 
     return (
       <div className="Clock">
