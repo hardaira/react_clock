@@ -49,7 +49,9 @@ export class App extends React.PureComponent<{}, State> {
 
       if (prevState.clockName !== this.state.clockName) {
         // eslint-disable-next-line no-console
-        console.warn('Renamed from oldName to newName');
+        console.warn(
+          `Renamed from ${prevState.clockName} to ${this.state.clockName}`,
+        );
       }
     }
   }
