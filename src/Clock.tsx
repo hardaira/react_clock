@@ -6,13 +6,11 @@ type ClockProps = {
   today: Date;
 };
 type State = {
-  //clockName: string;
   today: Date;
 };
 
 export class Clock extends React.PureComponent<ClockProps> {
   state: State = {
-    //clockName: 'Clock-0',
     today: new Date(),
   };
 
@@ -28,18 +26,11 @@ export class Clock extends React.PureComponent<ClockProps> {
     prevProps: Readonly<{}>,
     prevState: Readonly<State>,
   ): void {
-    //if (this.state.hasClock) {
+    
     if (prevState.today !== this.state.today) {
       // eslint-disable-next-line no-console
       console.log(this.state.today.toUTCString().slice(-12, -4));
     }
-
-    //if (prevState.clockName !== this.state.clockName) {
-    // eslint-disable-next-line no-console
-    //console.warn(
-    // `Renamed from ${prevState.clockName} to ${this.state.clockName}`,
-    //);
-    //}
   }
 
   componentWillUnmount(): void {
@@ -47,7 +38,7 @@ export class Clock extends React.PureComponent<ClockProps> {
   }
 
   render() {
-    const { name }= this.props;
+    const { name } = this.props;
     const { today } = this.state;
 
     return (
