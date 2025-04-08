@@ -31,7 +31,7 @@ export class Clock extends React.PureComponent<ClockProps> {
     //if (this.state.hasClock) {
     if (prevState.today !== this.state.today) {
       // eslint-disable-next-line no-console
-      console.log('Updated time:', this.state.today);
+      console.log(this.state.today.toUTCString().slice(-12, -4));
     }
 
     //if (prevState.clockName !== this.state.clockName) {
