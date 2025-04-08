@@ -42,11 +42,6 @@ export class App extends React.PureComponent<{}, State> {
     prevState: Readonly<State>,
   ): void {
     if (this.state.hasClock) {
-      if (prevState.today !== this.state.today) {
-        // eslint-disable-next-line no-console
-        console.log('Updated time:', this.state.today);
-      }
-
       if (prevState.clockName !== this.state.clockName) {
         // eslint-disable-next-line no-console
         console.warn(
