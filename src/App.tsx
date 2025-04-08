@@ -64,7 +64,8 @@ export class App extends React.PureComponent<{}, State> {
     this.setState({ hasClock: false });
   };
 
-  handleLeftClick = (): void => {
+  handleLeftClick = (event: MouseEvent): void => {
+    event.preventDefault();
     this.setState({ hasClock: true });
   };
 
